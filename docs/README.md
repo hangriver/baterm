@@ -74,6 +74,7 @@ If you only have 5 minutes, read vision.md + agent-prompt.md. That combination i
 - **English-first for technical content.** Code, identifiers, commands, and config keys are English. Comments may be English or bilingual Chinese/English. Long-form narrative (vision, retrospectives) may be primarily Chinese when the author prefers; this is a deliberate bilingual tolerance.
 - **Dates in `YYYY-MM-DD`** (ISO 8601). Avoid `07/05/26` or `2026/7/5`.
 - **No placeholder text.** Never ship `xxx`, `TBD`, `TODO: fill this in`, or `...` in committed docs. If a section is incomplete, write that explicitly: `Status: incomplete, blocked on <reason>`.
+- **Empty directories use `.gitkeep`.** Git does not track empty folders. When you scaffold a new subdirectory that has no real content yet, drop a single empty file named `.gitkeep` into it so the directory structure survives `git push`. `.gitkeep` is a git convention, not a doc placeholder — once real files land in the directory, delete the `.gitkeep` so the folder is no longer "empty".
 - **Revision markers.** When a doc is updated, add a one-line entry at the bottom of the affected section: `> v0.2 (2026-07-05): added Free-tile design constraint`. Full revision history lives at the top of each doc.
 
 ---
